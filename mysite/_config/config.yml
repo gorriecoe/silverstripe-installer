@@ -1,0 +1,26 @@
+---
+Name: mysite
+After:
+  0: 'framework/*'
+  1: 'cms/*'
+i18n:
+  default_locale: en_NZ
+Database:
+  name: default
+SSViewer:
+  theme_enabled: true
+  theme: default
+GDBackend:
+  default_quality: 90
+SiteConfig:
+  extensions:
+    0: TrackingConfig
+    1: AppearanceConfig
+StringField:
+  extensions:
+    - StringFieldExtension
+Link:
+  templates:
+    iconright: "Place icon on the right"
+  extensions:
+    - LinkExtension

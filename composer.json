@@ -1,0 +1,34 @@
+{
+  "name": "gorriecoe/silverstripe-installer",
+  "description": "SilverStripe installer",
+  "authors": [
+    {
+      "name": "Gorrie",
+      "email": "gorriecoe@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.3",
+    "silverstripe/cms": "3.2.*",
+    "silverstripe/framework": "3.2.*",
+    "silverstripe/userforms": "@stable",
+    "silverstripe/secureassets": "1.*",
+    "silverstripe/googlesitemaps": "1.*",
+    "silverstripe-australia/gridfieldextensions": "1.*",
+    "silverstripe/tagfield": "1.*",
+    "silverstripe/spamprotection": "2.*",
+    "colymba/gridfield-bulk-editing-tools": "1.*",
+    "unclecheese/betterbuttons": "1.*",
+    "plato-creative/silverstripe-better-meta": "dev-master",
+    "jonom/focuspoint": "2.*",
+    "tractorcow/silverstripe-robots": "3.*",
+    "axllent/silverstripe-intelligent-404": "1.*",
+    "sheadawson/silverstripe-linkable": "1.*"
+
+  },
+  "require-dev": {
+    "phpunit/PHPUnit": "~3.7"
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev"
+}

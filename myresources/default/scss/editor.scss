@@ -1,0 +1,15 @@
+// import typography styles for the editor in the CMS
+@import "node_modules/foundation-sites/scss/foundation";
+@import "settings";
+
+.typography {
+  font-size: $global-font-size;
+  padding: rem-calc(10);
+}
+
+@include foundation-global-styles;
+@include foundation-typography;
+@include foundation-button;
+
+@import "base";
+@import "form";
