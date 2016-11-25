@@ -22,17 +22,11 @@ elixir.config.css.autoprefix.options.browsers = ['> 1%', 'IE > 8'];
 Tasks
 -------------------------------------------------------------------*/
 
-var knownOptions = { string: 'theme' };
-var options = minimist(process.argv.slice(2), knownOptions);
-if (typeof options.theme !== 'undefined') {
-    $themeDir = options.theme;
-} else {
-    $themeDir = 'default';
-}
-
-elixir.config.assetsPath = elixir.config.assetsPath + '/' + $themeDir;
-elixir.config.publicPath = elixir.config.publicPath + '/' + $themeDir;
-
+var knownOptions = { string: 'theme' },
+    options = minimist(process.argv.slice(2), knownOptions),
+    themeDir = (typeof options.theme !== 'undefined') ? options.theme : 'default';
+elixir.config.assetsPath = elixir.config.assetsPath + '/' + themeDir;
+elixir.config.publicPath = elixir.config.publicPath + '/' + themeDir;
 
 elixir(function(mix) {
     mix.sass('app.scss')
