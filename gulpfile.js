@@ -5,7 +5,6 @@ Required plugins
 var elixir = require('laravel-elixir'),
     minimist = require('minimist');
 require('laravel-elixir-webpack-official');
-require('laravel-elixir-clean');
 require('laravel-elixir-minify-html');
 
 /*-------------------------------------------------------------------
