@@ -24,6 +24,17 @@ Next install the packages required for development.
 npm install
 ```
 
+During development run
+
+```
+gulp watch
+```
+
+To minify assets ready for production run
+```
+gulp watch -production
+```
+
 ## Maintainers
  * Gorrie <gorriecoe@gmail.com>
 
