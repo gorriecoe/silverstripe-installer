@@ -9,8 +9,8 @@
   ],
   "require": {
     "php": ">=5.3.3",
-    "silverstripe/cms": "3.2.*",
-    "silverstripe/framework": "3.2.*",
+    "silverstripe/cms": "3.5.*",
+    "silverstripe/framework": "3.5.*",
     "silverstripe/userforms": "@stable",
     "silverstripe/secureassets": "1.*",
     "silverstripe/googlesitemaps": "1.*",
