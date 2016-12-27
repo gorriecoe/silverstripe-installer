@@ -29,24 +29,26 @@ elixir.config.publicPath = elixir.config.publicPath + '/' + themeDir;
 
 elixir(function(mix) {
     mix.sass('app.scss')
-        .sass('editor.scss')
-        .webpack(
-            'app.js',
-            elixir.config.publicPath + '/js/app.js'
-        )
-        .copy(
-            elixir.config.assetsPath + '/fonts',
-            elixir.config.publicPath + '/fonts'
-        )
-        .copy(
-            elixir.config.assetsPath + '/favicon',
-            elixir.config.publicPath + '/favicon'
-        )
-        .copy(
-            elixir.config.assetsPath + '/img',
-            elixir.config.publicPath + '/img'
-        )
-        .html(
+    .sass('amp.scss')
+    .sass('editor.scss')
+    .webpack(
+        'app.js',
+        elixir.config.publicPath + '/js/app.js'
+    )
+    .copy(
+        elixir.config.assetsPath + '/fonts',
+        elixir.config.publicPath + '/fonts'
+    )
+    .copy(
+        elixir.config.assetsPath + '/favicon',
+        elixir.config.publicPath + '/favicon'
+    )
+    .copy(
+        elixir.config.assetsPath + '/img',
+        elixir.config.publicPath + '/img'
+    )
+    if (elixir.config.production) {
+        mix.html(
             elixir.config.assetsPath + '/templates/**/*.ss',
             elixir.config.publicPath + '/templates',
             {
@@ -56,4 +58,10 @@ elixir(function(mix) {
                 minifyJS: true
             }
         )
+    } else {
+        mix.copy(
+            elixir.config.assetsPath + '/templates/**/*.ss',
+            elixir.config.publicPath + '/templates'
+        )
+    }
 });
