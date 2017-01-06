@@ -3,8 +3,6 @@
 !/myresources/*
 !/mysite
 !/mysite/*
-!/themes
-!/themes/*
 !/.editorconfig
 !/.gitattributes
 !/.gitignore
