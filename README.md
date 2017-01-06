@@ -31,8 +31,17 @@ gulp watch
 ```
 
 To minify assets ready for production run
+
 ```
-gulp watch -production
+gulp watch --production
+```
+
+### Developing multiple themes
+
+By default gulp with compile myresources/default.  If you need to complile a different theme you can specify it it with the parameter `--theme` for example:
+
+```
+gulp watch --production --theme=mythemename
 ```
 
 ## Maintainers
