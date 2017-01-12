@@ -23,8 +23,8 @@
     "jonom/focuspoint": "2.*",
     "tractorcow/silverstripe-robots": "3.*",
     "axllent/silverstripe-intelligent-404": "1.*",
-    "sheadawson/silverstripe-linkable": "1.*"
-
+    "sheadawson/silverstripe-linkable": "1.*",
+    "bummzack/sortablefile": "1.*"
   },
   "require-dev": {
     "phpunit/PHPUnit": "~3.7"
