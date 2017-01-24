@@ -39,6 +39,11 @@ elixir(function(mix) {
         elixir.config.assetsPath + '/fonts',
         elixir.config.publicPath + '/fonts'
     )
+    // Copy fonts from font awesome
+    .copy(
+        'node_modules/font-awesome/fonts',
+        elixir.config.publicPath + '/fonts'
+    )
     .copy(
         elixir.config.assetsPath + '/favicon',
         elixir.config.publicPath + '/favicon'
