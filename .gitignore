@@ -3,7 +3,11 @@
 !/myresources/*
 !/mysite
 !/mysite/*
+!/themes
+!/themes/*
 !/.editorconfig
+!/.ftpignore
+!/.ftpconfig
 !/.gitattributes
 !/.gitignore
 !/.gitconfig

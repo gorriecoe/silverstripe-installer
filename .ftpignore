@@ -1,0 +1,19 @@
+# Please note that this is a beta-feature and will only work with local-to-remote sync!
+# For example, the following patterns will be ignored on sync:
+.ftpconfig
+.DS_Store
+.editorconfig
+.git
+.gitattributes
+.gitignore
+/*.md
+gulpfile.js
+composer.json
+composer.lock
+LICENSE
+README.md
+webpack.config.js
+/myresources/
+/myresources/*
+node_modules/
+node_modules/*
