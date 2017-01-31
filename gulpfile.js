@@ -6,6 +6,7 @@ var elixir = require('laravel-elixir'),
     minimist = require('minimist');
 require('laravel-elixir-webpack-official');
 require('laravel-elixir-minify-html');
+require('laravel-elixir-svgmin');
 
 /*-------------------------------------------------------------------
 Configuration
@@ -52,6 +53,10 @@ elixir(function(mix) {
         elixir.config.assetsPath + '/img',
         elixir.config.publicPath + '/img'
     )
+    .svg(
+        elixir.config.assetsPath + '/svg',
+        elixir.config.publicPath + '/svg'
+    );
     if (elixir.config.production) {
         mix.html(
             elixir.config.assetsPath + '/templates/**/*.ss',
