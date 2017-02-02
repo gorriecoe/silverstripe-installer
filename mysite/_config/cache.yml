@@ -1,7 +1,5 @@
 # configuration
 DynamicCache:
-  enabled: false
-  cacheDuration: 604800
   ignoredPages:
     - UserDefinedForm
 # add caching to objects
