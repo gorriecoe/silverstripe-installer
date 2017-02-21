@@ -7,6 +7,7 @@ var elixir = require('laravel-elixir'),
 require('laravel-elixir-webpack-official');
 require('laravel-elixir-minify-html');
 require('laravel-elixir-svgmin');
+require('laravel-elixir-clear');
 
 /*-------------------------------------------------------------------
 Configuration
@@ -29,6 +30,7 @@ elixir.config.assetsPath = elixir.config.assetsPath + '/' + themeDir;
 elixir.config.publicPath = elixir.config.publicPath + '/' + themeDir;
 
 elixir(function(mix) {
+    mix.clear([elixir.config.publicPath + '/**/*.*']);
     mix.sass('app.scss')
     .sass('amp.scss')
     .sass('editor.scss')
