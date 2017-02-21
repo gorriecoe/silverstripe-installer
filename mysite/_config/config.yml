@@ -12,15 +12,12 @@ SSViewer:
   theme: default
 GDBackend:
   default_quality: 90
-SiteConfig:
-  extensions:
-    0: TrackingConfig
-    1: AppearanceConfig
 StringField:
   extensions:
-    - StringFieldExtension
-Link:
-  templates:
-    iconright: "Place icon on the right"
+    - StringFieldManipulationExtension
+SiteConfig:
   extensions:
-    - LinkExtension
+    - SiteConfigTrackingExtension
+Link:
+  extensions:
+    - LinkTrackingExtension
