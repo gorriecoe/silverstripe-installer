@@ -8,8 +8,10 @@ $fa-font-path: "../fonts";
 
 // @include foundation-everything;
 
-// OR choose what you need ny uncommenting the following
+// OR choose what you need by uncommenting the following
 
+// @include foundation-global-styles;
+// @include foundation-grid;
 // @include foundation-typography;
 // @include foundation-forms;
 // @include foundation-button;
