@@ -70,7 +70,7 @@ elixir(function(mix) {
                 removeComments: true,
                 minifyJS: true
             }
-        ).shorten(['class-','small-','medium-','large-','xlarge-','text-','show-','hide-'],['ss']);
+        ).shorten(['class-','small-','medium-','large-','xlarge-','text-','show-','hide-','fa-'],['ss']);
     } else {
         mix.copy(
             elixir.config.assetsPath + '/templates/**/*.ss',
