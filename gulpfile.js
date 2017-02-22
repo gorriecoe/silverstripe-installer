@@ -8,6 +8,7 @@ require('laravel-elixir-webpack-official');
 require('laravel-elixir-minify-html');
 require('laravel-elixir-svgmin');
 require('laravel-elixir-clear');
+require('laravel-elixir-selectorshorten');
 
 /*-------------------------------------------------------------------
 Configuration
@@ -30,7 +31,7 @@ elixir.config.assetsPath = elixir.config.assetsPath + '/' + themeDir;
 elixir.config.publicPath = elixir.config.publicPath + '/' + themeDir;
 
 elixir(function(mix) {
-    mix.clear([elixir.config.publicPath + '/**/*.*']);
+    mix.clear([elixir.config.publicPath]);
     mix.sass('app.scss')
     .sass('amp.scss')
     .sass('editor.scss')
@@ -69,11 +70,11 @@ elixir(function(mix) {
                 removeComments: true,
                 minifyJS: true
             }
-        )
+        ).shorten(['class-','small-','medium-','large-','xlarge-','text-','show-','hide-'],['ss']);
     } else {
         mix.copy(
             elixir.config.assetsPath + '/templates/**/*.ss',
             elixir.config.publicPath + '/templates'
-        )
+        );
     }
 });
