@@ -41,7 +41,8 @@ rules:
     - convention: '0'
   brace-style:
     - 2
-    - allow-single-line: true
+    - style: 1tbs
+    - allow-single-line: false
   clean-import-paths:
     - 2
     - filename-extension: false
