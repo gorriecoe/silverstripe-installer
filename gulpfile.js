@@ -19,6 +19,9 @@ elixir.config.assetsPath = 'myresources';
 elixir.config.publicPath = 'themes';
 elixir.config.css.sass.folder = 'scss';
 elixir.config.css.autoprefix.options.browsers = ['> 1%', 'IE > 8'];
+elixir.config.css.minifier.pluginOptions = {
+    keepSpecialComments: 0
+};
 
 /*-------------------------------------------------------------------
 Tasks
