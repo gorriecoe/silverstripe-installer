@@ -62,7 +62,20 @@ elixir(function(mix) {
     .svg(
         elixir.config.assetsPath + '/svg',
         elixir.config.publicPath + '/svg'
-    );
+    )
+    .processEmails({
+        source: {
+            sass: elixir.config.assetsPath + '/emails/scss/email.scss',
+            templates: elixir.config.assetsPath + '/emails/templates',
+            images: elixir.config.assetsPath + '/emails/img',
+            allowed_view_extensions: 'ss'
+        },
+        public: {
+            views: elixir.config.publicPath + '/templates/emails',
+            css: elixir.config.publicPath + '/css',
+            images: elixir.config.publicPath + '/images/emails'
+        }
+    });
     if (elixir.config.production) {
         mix.html(
             elixir.config.assetsPath + '/templates/**/*.ss',
