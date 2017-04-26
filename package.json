@@ -7,7 +7,7 @@
     "jquery": "2.2.3",
     "laravel-elixir": "6.0.0-11",
     "laravel-elixir-minify-html": "^1.0.5",
-    "laravel-elixir-process-email": "^0.1.0",
+    "laravel-elixir-process-email": "^1.0.0",
     "laravel-elixir-svgmin": "^0.1.0",
     "laravel-elixir-webpack-official": "^1.0.8",
     "minimist": "^1.2.0",
