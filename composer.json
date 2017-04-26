@@ -17,6 +17,9 @@
     "silverstripe-australia/gridfieldextensions": "1.*",
     "silverstripe/tagfield": "1.*",
     "silverstripe/spamprotection": "2.*",
+    "silverstripe-modular-project/silverstripe-links": "dev-master",
+    "silverstripe-modular-project/silverstripe-actions": "dev-master",
+    "silverstripe-modular-project/silverstripe-menus": "dev-master",
     "colymba/gridfield-bulk-editing-tools": "1.*",
     "unclecheese/betterbuttons": "1.*",
     "plato-creative/silverstripe-better-meta": "^0.1",
@@ -25,7 +28,6 @@
     "tractorcow/silverstripe-robots": "3.*",
     "axllent/silverstripe-intelligent-404": "1.*",
     "undefinedoffset/silverstripe-nocaptcha": "0.2.*",
-    "sheadawson/silverstripe-linkable": "1.*",
     "bummzack/sortablefile": "1.*"
   },
   "require-dev": {
