@@ -19,13 +19,7 @@ elixir.config.assetsPath = 'myresources';
 elixir.config.publicPath = 'themes';
 elixir.config.css.sass.folder = 'scss';
 elixir.config.css.autoprefix.options.browsers = ['> 1%', 'IE > 8'];
-elixir.config.css.minifier.pluginOptions = {
-    keepSpecialComments: 0
-};
-
-/*-------------------------------------------------------------------
-Tasks
--------------------------------------------------------------------*/
+elixir.config.css.minifier.pluginOptions.keepSpecialComments = 0;
 
 var knownOptions = { string: 'theme' },
     options = minimist(process.argv.slice(2), knownOptions),
@@ -33,10 +27,16 @@ var knownOptions = { string: 'theme' },
 elixir.config.assetsPath = elixir.config.assetsPath + '/' + themeDir;
 elixir.config.publicPath = elixir.config.publicPath + '/' + themeDir;
 
+elixir.config.email.assets.sass = elixir.config.assetsPath + '/emails/scss/email.scss';
+elixir.config.email.assets.templates = elixir.config.assetsPath + '/emails/templates/**/*.ss';
+elixir.config.email.public.views = elixir.config.publicPath + '/templates/emails';
+
+/*-------------------------------------------------------------------
+Tasks
+-------------------------------------------------------------------*/
+
 elixir(function(mix) {
-    mix.clear([elixir.config.publicPath]);
     mix.sass('app.scss')
-    .sass('amp.scss')
     .sass('editor.scss')
     .webpack(
         'app.js',
@@ -63,19 +63,7 @@ elixir(function(mix) {
         elixir.config.assetsPath + '/svg',
         elixir.config.publicPath + '/svg'
     )
-    .processEmails({
-        source: {
-            sass: elixir.config.assetsPath + '/emails/scss/email.scss',
-            templates: elixir.config.assetsPath + '/emails/templates',
-            images: elixir.config.assetsPath + '/emails/img',
-            allowed_view_extensions: 'ss'
-        },
-        public: {
-            views: elixir.config.publicPath + '/templates/emails',
-            css: elixir.config.publicPath + '/css',
-            images: elixir.config.publicPath + '/images/emails'
-        }
-    });
+    .processEmails();
     if (elixir.config.production) {
         mix.html(
             elixir.config.assetsPath + '/templates/**/*.ss',
@@ -86,7 +74,7 @@ elixir(function(mix) {
                 removeComments: true,
                 minifyJS: true
             }
-        ).shorten(['class-','small-','medium-','large-','xlarge-','text-','show-','hide-','fa-'],['ss']);
+        );
     } else {
         mix.copy(
             elixir.config.assetsPath + '/templates/**/*.ss',
