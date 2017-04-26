@@ -4,8 +4,8 @@
 
 This installer requires you have the following:
 
-- silverstripe/cms ^3.2
-- silverstripe/framework ^3.2
+- silverstripe/cms ^3.5
+- silverstripe/framework ^3.5
 - [Composer](https://getcomposer.org/)
 - [npm](https://www.npmjs.com/)
 - [Elixir](https://laravel.com/docs/5.2/elixir)
