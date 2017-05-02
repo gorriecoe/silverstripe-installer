@@ -7,8 +7,7 @@ var elixir = require('laravel-elixir'),
 require('laravel-elixir-webpack-official');
 require('laravel-elixir-minify-html');
 require('laravel-elixir-svgmin');
-require('laravel-elixir-clear');
-require('laravel-elixir-selectorshorten');
+require('laravel-elixir-process-email');
 
 /*-------------------------------------------------------------------
 Configuration
