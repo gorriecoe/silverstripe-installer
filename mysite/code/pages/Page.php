@@ -15,6 +15,8 @@ class Page_Controller extends ContentController
     public function init()
     {
         parent::init();
+        Requirements::themedCSS('app');
+        Requirements::themedJavascript('app');
         Requirements::block(THIRDPARTY_DIR.'/jquery/jquery.js');
         Requirements::block('framework/javascript/i18n.js');
         Requirements::block('userforms/thirdparty/jquery-validate/jquery.validate.min.js');
@@ -23,7 +25,6 @@ class Page_Controller extends ContentController
         Requirements::block('userforms/javascript/UserForm.js');
         Requirements::block('userforms/thirdparty/jquery.are-you-sure/jquery.are-you-sure.js');
         Requirements::set_force_js_to_bottom(true);
-        Requirements::javascript($this->ThemeDir().'/js/app.js');
     }
 
     public function IsLive()

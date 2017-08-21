@@ -1,7 +1,14 @@
-// Require jQuery
-window.$ = window.jQuery = require('jquery/dist/jquery.js');
-// Require Foundation
-require('foundation-sites');
+/**
+* jQuery Framework
+*/
+import jQuery from 'jquery';
+window.$ = window.jQuery = jQuery;
+
+/**
+* Foundation 6.4 Framework
+*/
+import { Foundation } from './foundation';
+Foundation.addToJquery(jQuery);
 
 (function($) {
     $(document).foundation();

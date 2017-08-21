@@ -2,7 +2,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs" role="navigation">
     <ul>
         <li class="item">
-            <a href="$absoluteBaseURL">
+            <a href="{$absoluteBaseURL}">
                 Home
             </a>
         </li>
@@ -10,12 +10,12 @@
         <% loop Pages %>
             <% if Last %>
                 <li class="item last current">
-                    $Title.XML
+                    {$Title.XML}
                 </li>
             <% else %>
                 <li class="item">
-                    <a href="$Link">
-                        $MenuTitle.XML
+                    <a href="{$Link}">
+                        {$MenuTitle.XML}
                     </a>
                 </li>
             <% end_if %>

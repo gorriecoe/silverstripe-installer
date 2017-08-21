@@ -21,7 +21,7 @@
 !/package.json
 !/phpunit.xml
 !/README.md
-!/webpack.config.js
+!/webpack.mix.js
 *Thumbs.db
 *web.config
 *.log
